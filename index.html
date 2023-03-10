@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+</head>
+<body>
+    
+
+    <script>
+        // init var
+        var nama = "Hafiz Herla Firmansyah";
+        var jabatan = "Manager";
+        var status = "Belum Menikah";
+        var bpjs = 0.1;
+        var tunJab = 0.1;
+        // init var
+
+        // gaji pokok
+        if (jabatan == "Manager") {
+            gajipokok = 10000000;
+        } else if(jabatan == "Asisten Manager") {
+            gajipokok = 8000000;
+        } else if(jabatan == "Staff") {
+            gajipokok = 5000000;
+        }else {
+            gajipokok = 0;
+        }
+        // gaji pokok
+
+
+        // tunjangan keluarga
+        if (status == "Menikah"){
+            tunKel = 0.1;
+        }else{
+            tunKel = 0;
+        }
+        // tunjangan keluarga
+
+        // Hit
+        let tjbRes = tunJab * gajipokok;
+        let bpjsRes = bpjs * gajipokok;
+        let tjbKel = tunKel * gajipokok;
+
+
+        let result = gajipokok + tjbRes + tjbKel - bpjsRes;
+        // Hit
+
+
+
+
+    </script>
+
+    <table cellpadding="10" border="1"> 
+        <tr>
+            <th>Nama</th>
+            <td><script>document.write(nama)</script></td>
+        </tr>
+        <tr>   
+            <th>Jabatan</th>
+            <td><script>document.write(jabatan)</script></td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td><script>document.write(status)</script></td>
+        </tr>
+        <tr>
+            <th>Gaji Pokok</th>
+            <td>Rp. <script>document.write(gajipokok)</script></td>
+        </tr>
+        <tr>
+            <th>Tunjangan Jabatan</th>
+            <td>Rp. <script>document.write(gajipokok * tunJab)</script></td>
+        </tr>
+        <tr>
+            <th>BPJS (potongan)</th>
+            <td>Rp. <script>document.write(bpjs * gajipokok)</script></td>
+        </tr>
+        <tr>
+            <th>Tunjangan Keluarga</th>
+            <td>Rp. <script>document.write(tunKel * gajipokok)</script></td>
+        </tr>
+        <tr>
+            <th>Total Gaji Bersih</th>
+            <td>Rp. <script>document.write(result)</script></td>
+        </tr>
+        
+
+
+    </table>
+
+
+
+
+</body>
+</html>
